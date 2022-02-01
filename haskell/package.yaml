@@ -1,0 +1,51 @@
+name:                FourtyAlgorithms
+version:             0.1.0.0
+github:              "caffeinatedcm/40-algs-every-programmer-should-know/haskell"
+license:             MIT
+author:              "CaffeinatedCM"
+maintainer:          "example@example.com"
+copyright:           "2022 CaffeinatedCM"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/caffeinatedcm/40-algs-every-programmer-should-know#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  FourtyAlgorithms-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - FourtyAlgorithms
+
+tests:
+  FourtyAlgorithms-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - FourtyAlgorithms
+    - tasty
+    - tasty-discover
+    - tasty-quickcheck
