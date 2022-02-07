@@ -1,11 +1,11 @@
-module Chapter3.SortsSpec where
+module Chapter03.SortsSpec where
 
 import Test.Tasty
 import Test.Tasty.QuickCheck
 
 import Data.List (sort)
 
-import Chapter3.Sorts 
+import Chapter03.Sorts 
 
 tests :: TestTree
 tests = testGroup "Sorts" [ testProperty "Bubble Sort" bubbleSortTest

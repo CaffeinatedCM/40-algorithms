@@ -1,5 +1,5 @@
 
-module Chapter3.Sorts where
+module Chapter03.Sorts where
 
 import Data.List (transpose, unfoldr)
 

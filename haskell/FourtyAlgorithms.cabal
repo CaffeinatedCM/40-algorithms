@@ -25,15 +25,22 @@ source-repository head
 
 library
   exposed-modules:
-      Chapter3.Searches
-      Chapter3.Sorts
+      Chapter03.Searches
+      Chapter03.Sorts
+      Chapter04.TSP
+      Chapter05.FraudCheck
+      Chapter05.Graphs
       Lib
   other-modules:
       Paths_FourtyAlgorithms
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      array
+    , base >=4.7 && <5
+    , containers
+    , extra
+    , random
   default-language: Haskell2010
 
 executable FourtyAlgorithms-exe
@@ -45,23 +52,31 @@ executable FourtyAlgorithms-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       FourtyAlgorithms
+    , array
     , base >=4.7 && <5
+    , containers
+    , extra
+    , random
   default-language: Haskell2010
 
 test-suite FourtyAlgorithms-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      Chapter3.SearchesSpec
-      Chapter3.SortsSpec
-      Chapter3.Spec
+      Chapter03.SearchesSpec
+      Chapter03.SortsSpec
+      Chapter03.Spec
       Paths_FourtyAlgorithms
   hs-source-dirs:
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       FourtyAlgorithms
+    , array
     , base >=4.7 && <5
+    , containers
+    , extra
+    , random
     , tasty
     , tasty-discover
     , tasty-quickcheck

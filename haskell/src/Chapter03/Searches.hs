@@ -1,4 +1,4 @@
-module Chapter3.Searches where
+module Chapter03.Searches where
 
 -- Linear Search
 linearSearch :: Eq a => [a] -> a -> Bool

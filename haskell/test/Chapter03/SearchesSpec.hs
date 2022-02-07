@@ -1,11 +1,11 @@
-module Chapter3.SearchesSpec where
+module Chapter03.SearchesSpec where
 
 import Test.Tasty
 import Test.Tasty.QuickCheck
 
 import Data.List (sort)
 
-import Chapter3.Searches 
+import Chapter03.Searches 
 
 tests :: TestTree
 tests = testGroup "Searches" [ testProperty "Linear Search" linearSearchTest
